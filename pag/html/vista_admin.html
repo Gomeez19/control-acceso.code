@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos</title>
+    <link rel="icon" href="../img/iub_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css">
+</head>
+
+<body onload="consultar_total()">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="../html/admin.html"><img src="../img/iub_logo.png" alt="logo" width="100px"
+                    class="rounded-circle"></a>
+                    <h1>MOSTRAR DATOS</h1>
+            <div class="ml-auto">
+                <a href="../html/admin.html"><button class="btn btn-danger">Regresar</button></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="tab-content" id="nav-tabusuarios">
+        <div class="tab-pane fade show active" id="nav-listado" role="tabpanel" aria-labelledby="nav-listado-tab">
+            <!--- TAB LISTADO--->
+            <div class="container mt-4">
+                <div class="table-responsive">
+                    <table id="tablausuarios" class="table table-striped" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th><b>ID</b></th>
+                                <th><b>Nombre</b></th>
+                                <th><b>Documento</b></th>
+                                <th><b>Genero</b></th>
+                                <th><b>Correo</b></th>
+                                <th><b>Motivo</b></th>
+                                <th><b>Numero</b></th>
+                                <th><b>Sede ID</b></th>
+                                <th><b>Numero</b></th>
+                                <th><b>Estado</b></th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class=" bg-light text-white mt-5">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-6 text-dark">
+                    <h5>Donde Estamos</h5>
+                    <p>
+                        <strong>Barranquilla, Atlántico:</strong><br>
+                        Cra 45 No. 48-31<br>
+                        PBX.: +57 (605) 311 2370 Ext. 203 - 204 Solo FAX<br>
+                        Línea Anticorrupción: PBX.: +57 (605) 311 2370
+                    </p>
+                    <p>
+                        <strong>Soledad, Atlántico:</strong><br>
+                        Calle 18 No. 39-100<br>
+                        Tels.:+57 (605) 311 2370
+                    </p>
+                    <p>
+                        <strong>Campus Barranquilla - Sede Plaza de la Paz:</strong><br>
+                        Carrera 45 No. 48-31
+                    </p>
+                    <p>
+                        <strong>Campus Barranquilla - Sede Centro Histórico:</strong><br>
+                        Calle 42 No. 45-22
+                    </p>
+                    <p>
+                        <strong>Campus Barranquilla - Sede Posgrados:</strong><br>
+                        Carrera 58 No. 68-73
+                    </p>
+                </div>
+                <div class="col-md-6 text-dark">
+                    <h5>Horarios de Atención</h5>
+                    <p>
+                        Lunes a viernes:<br>
+                        7:00 a.m. a 7:00 p.m<br><br>
+                        Sábados:<br>
+                        8:00 a.m. a 12:00 m.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
+    <script src="../js/mostrar.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida</title>
+    <link rel="icon" href="../img/iub_logo.png" type="image/x-icon">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Incluir jwt-decode -->
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="../html/admin.html">
+                <img src="../img/iub_logo.png" alt="logo" width="100px" class="rounded-circle">
+            </a>
+            <div class="ms-auto">
+                <a href="../index.html" class="btn btn-danger">
+                    <i class="bi bi-box-arrow-right"></i> Cerrar Sesión
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row mt-5 mb-5 justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h1>BIENVENIDO A LA INSTITUCION UNIVERSITARIA DE BARRANQUILLA</h1>
+                <p id="mensajeBienvenida" class="lead mt-5"></p>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-light text-dark mt-5">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Donde Estamos</h5>
+                    <p>
+                        <strong>Barranquilla, Atlántico:</strong><br>
+                        Cra 45 No. 48-31<br>
+                        PBX.: +57 (605) 311 2370 Ext. 203 - 204 Solo FAX<br>
+                        Línea Anticorrupción: PBX.: +57 (605) 311 2370
+                    </p>
+                    <p>
+                        <strong>Soledad, Atlántico:</strong><br>
+                        Calle 18 No. 39-100<br>
+                        Tels.:+57 (605) 311 2370
+                    </p>
+                    <p>
+                        <strong>Campus Barranquilla - Sede Plaza de la Paz:</strong><br>
+                        Carrera 45 No. 48-31
+                    </p>
+                    <p>
+                        <strong>Campus Barranquilla - Sede Centro Histórico:</strong><br>
+                        Calle 42 No. 45-22
+                    </p>
+                    <p>
+                        <strong>Campus Barranquilla - Sede Posgrados:</strong><br>
+                        Carrera 58 No. 68-73
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Horarios de Atención</h5>
+                    <p>
+                        Lunes a viernes:<br>
+                        7:00 a.m. a 7:00 p.m<br><br>
+                        Sábados:<br>
+                        8:00 a.m. a 12:00 m.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/bienvenida.js"></script>
+</body>
+
+</html>

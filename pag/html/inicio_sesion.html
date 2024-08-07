@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="icon" href="../img/iub_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../js/login.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid d-flex justify-content-center align-items-center min-vh-100"
+        style="background: url('../img/IUB_fondo.jpg') no-repeat center center; background-size: cover;">
+        <div>
+            <div class="card mt-5">
+                <div class="card-header">
+                    INICIO DE SESION
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Ingrese su informacion</h5>
+                    <div class="row">
+                        <div class="col-lg-6 mt-3">
+                            <form>
+                                <b><label for="txtusuario" class="mb-3">Nombre</label></b>
+                                <input type="text" class="form-control mb-3 w-65" id="txtusuario">
+                                <b><label for="txtdocumento" class="mb-3">No de Documento o codigo</label></b>
+                                <input type="password" class="form-control mb-3 w-65" id="txtdocumento">
+                                <button type="button" class="btn btn-primary mb-2" onclick="verificar()">
+                                    <i class="bi bi-box-arrow-in-right"></i> Ingresar
+                                </button>
+                                <a href="../index.html" class="btn btn-danger mb-2">
+                                    <i class="bi bi-arrow-left"></i> Regresar
+                                </a>                            
+                            </form>
+                        </div>
+                        <div class="col-lg-6 text-center mt-3">
+                            <div class="text-center w-100">
+                                <img src="../img/iub_logo.png" class="img-fluid w-60 h-80 mb-2" alt="Imagen de logo IUB">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light text-white">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-6 text-dark">
+                    <h5>Donde Estamos</h5>
+                    <p>
+                        <strong>Barranquilla, Atlántico:</strong><br>
+                        Cra 45 No. 48-31<br>
+                        PBX.: +57 (605) 311 2370 Ext. 203 - 204 Solo FAX<br>
+                        Línea Anticorrupción: PBX.: +57 (605) 311 2370
+                    </p>
+                    <p>
+                        <strong>Soledad, Atlántico:</strong><br>
+                        Calle 18 No. 39-100<br>
+                        Tels.:+57 (605) 311 2370
+                    </p>
+                    <p>
+                        <strong>Campus Barranquilla - Sede Plaza de la Paz:</strong><br>
+                        Carrera 45 No. 48-31
+                    </p>
+                    <p>
+                        <strong>Campus Barranquilla - Sede Centro Histórico:</strong><br>
+                        Calle 42 No. 45-22
+                    </p>
+                    <p>
+                        <strong>Campus Barranquilla - Sede Posgrados:</strong><br>
+                        Carrera 58 No. 68-73
+                    </p>
+                </div>
+                <div class="col-md-6 text-dark">
+                    <h5>Horarios de Atención</h5>
+                    <p>
+                        Lunes a viernes:<br>
+                        7:00 a.m. a 7:00 p.m<br><br>
+                        Sábados:<br>
+                        8:00 a.m. a 12:00 m.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoModalLabel">Importante</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="../img/contra.jpg" class="img-fluid mb-3" alt="Proteja su contraseña">
+                    <p>Porfavor asegurese de que proteger bien su contraseña y mantenerla privada no acepte ayuda de extraños </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#infoModal').modal('show');
+        });
+    </script>
+</body>
+
+</html>

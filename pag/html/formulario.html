@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Formulario</title>
+    <link rel="icon" href="../img/iub_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/proceso.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/iub_logo.png" alt="logo" width="100px" class="rounded-circle">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark active" aria-current="page" href="eleccion.html">REGRESAR</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <h3 class="card-title">Formulario de Registro</h3>
+                    <div class="form-group mt-3">
+                        <label for="nombres">Nombre completo</label>
+                        <input type="text" class="form-control mt-1" id="nombres" maxlength="100" minlength="1"
+                            placeholder="Escriba sus nombres">
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="documento">Documento</label>
+                        <input type="text" class="form-control mt-1" id="documento" maxlength="100" minlength="1"
+                        placeholder="Escriba su documento de identidad">
+                    </div>
+                    <div class="form-group mt-3">
+                        <label>Género</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sexo" id="masculino" value="M">
+                            <label class="form-check-label" for="masculino">M</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sexo" id="femenino" value="F">
+                            <label class="form-check-label" for="femenino">F</label>
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" class="form-control mt-1" id="correo" maxlength="100" minlength="1"
+                        placeholder="Escriba su correo">
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="numero">Número celular</label>
+                        <input type="tel" class="form-control mt-1" id="numero" maxlength="100" minlength="1"
+                        placeholder="Digite su número celular">
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="motivo">A donde se dirige</label>
+                        <select class="form-control mt-1" id="motivo">
+                            <option value="Admisiones">Admisiones</option>
+                            <option value="Centro de lenguas">Facultad de ingieneria</option>
+                        </select>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="sede">Seleccione la sede</label>
+                        <select class="form-control mt-1" id="sede">
+                            <option value="1">Plaza de la paz</option>
+                            <option value="2">Sede de soledad</option>
+                            
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary mt-4" onclick="registro()">Enviar</button>
+                </form>
+                
+        </div>
+    </div>
+    <div id="informacion" class="mt-4"></div>
+    </div>
+    <footer class=" bg-light text-white mt-5">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-6 text-dark">
+                    <h5>Donde Estamos</h5>
+                    <p>
+                        <strong>Barranquilla, Atlántico:</strong><br>
+                        Cra 45 No. 48-31<br>
+                        PBX.: +57 (605) 311 2370 Ext. 203 - 204 Solo FAX<br>
+                        Línea Anticorrupción: PBX.: +57 (605) 311 2370
+                    </p>
+                    <p>
+                        <strong>Soledad, Atlántico:</strong><br>
+                        Calle 18 No. 39-100<br>
+                        Tels.:+57 (605) 311 2370
+                    </p>
+                    <p>
+                        <strong>Campus Barranquilla - Sede Plaza de la Paz:</strong><br>
+                        Carrera 45 No. 48-31
+                    </p>
+                    <p>
+                        <strong>Campus Barranquilla - Sede Centro Histórico:</strong><br>
+                        Calle 42 No. 45-22
+                    </p>
+                    <p>
+                        <strong>Campus Barranquilla - Sede Posgrados:</strong><br>
+                        Carrera 58 No. 68-73
+                    </p>
+                </div>
+                <div class="col-md-6 text-dark">
+                    <h5>Horarios de Atención</h5>
+                    <p>
+                        Lunes a viernes:<br>
+                        7:00 a.m. a 7:00 p.m<br><br>
+                        Sábados:<br>
+                        8:00 a.m. a 12:00 m.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</body>
+
+</html>

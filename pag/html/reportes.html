@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar Reporte</title>
+    <link rel="icon" href="../img/iub_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css">
+</head>
+
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="../html/admin.html">
+                <img src="../img/iub_logo.png" alt="logo" width="100px" class="rounded-circle">
+            </a>
+            <div class="navbar-title">
+                <h1>Generar Reporte</h1>
+            </div>
+            <div class="ml-auto">
+                <a href="../html/admin.html"><button class="btn btn-danger">Regresar</button></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido del Formulario de Reporte -->
+    <div class="container mt-5">
+        <form id="reportForm">
+            <div class="form-group">
+                <label for="reportType">Selecciona el tipo de reporte</label>
+                <select class="form-control" id="reportType" required>
+                    <option value="">Seleccionar...</option>
+                    <option value="entidades-personas">Distribución de Entidades por Personas</option>
+                    <option value="usuarios-tipo">Distribución de Usuarios por Tipo</option>
+                    <option value="permisos-sede">Permisos por Sede</option>
+                    <option value="formularios-motivo">Formularios por Motivo</option>
+                    <option value="genero-asistencia">Género de Asistencia</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Generar Reporte</button>
+        </form>
+
+        <!-- Modal -->
+        <div class="modal fade" id="reportModal" tabindex="-1" aria-labelledby="reportModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="reportModalLabel">Reporte</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="reportTableContainerModal"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="exportBtnModal" class="btn btn-success" style="display:none;">Exportar a Excel</button>
+                        <button type="button" id="exportBtnModalPdf" class="btn btn-danger" style="display:none;">Exportar a PDF</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-white mt-5">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-6 text-dark">
+                    <h5>Donde Estamos</h5>
+                    <p>
+                        <strong>Barranquilla, Atlántico:</strong><br>
+                        Cra 45 No. 48-31<br>
+                        PBX.: +57 (605) 311 2370 Ext. 203 - 204 Solo FAX<br>
+                        Línea Anticorrupción: PBX.: +57 (605) 311 2370
+                    </p>
+                    <p>
+                        <strong>Soledad, Atlántico:</strong><br>
+                        Calle 18 No. 39-100<br>
+                        Tels.:+57 (605) 311 2370
+                    </p>
+                    <p>
+                        <strong>Campus Barranquilla - Sede Plaza de la Paz:</strong><br>
+                        Carrera 45 No. 48-31
+                    </p>
+                    <p>
+                        <strong>Campus Barranquilla - Sede Centro Histórico:</strong><br>
+                        Calle 42 No. 45-22
+                    </p>
+                    <p>
+                        <strong>Campus Barranquilla - Sede Posgrados:</strong><br>
+                        Carrera 58 No. 68-73
+                    </p>
+                </div>
+                <div class="col-md-6 text-dark">
+                    <h5>Horarios de Atención</h5>
+                    <p>
+                        Lunes a viernes:<br>
+                        7:00 a.m. a 7:00 p.m<br><br>
+                        Sábados:<br>
+                        8:00 a.m. a 12:00 m.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="../js/reporte.js"></script>
+</body>
+
+</html>
